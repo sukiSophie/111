@@ -8,7 +8,7 @@
       {
         "tag": "proxy_dns",
         "address": "https://8.8.8.8/dns-query",
-        "detour": "手动选择"
+        "detour": "Manual-Select"
       },
       {
         "tag": "local_dns",
@@ -36,68 +36,68 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "手动选择",
-      "outbounds": ["香港节点", "台湾节点", "direct"]
+      "tag": "Manual-Select",
+      "outbounds": ["Hong-Kong-Group", "Taiwan-Group", "direct"]
     },
     {
       "type": "urltest",
-      "tag": "香港节点",
+      "tag": "Hong-Kong-Group",
       "outbounds": [
-        "香港 01", "香港 02", "香港 03", "香港 04", "香港 05",
-        "香港 06", "香港 07", "香港 08", "香港 09", "香港 10",
-        "香港 11", "香港 12", "香港 13", "香港 14", "香港 15",
-        "香港 16", "香港 17", "香港 18", "香港 19", "香港 20"
+        "HK 01", "HK 02", "HK 03", "HK 04", "HK 05",
+        "HK 06", "HK 07", "HK 08", "HK 09", "HK 10",
+        "HK 11", "HK 12", "HK 13", "HK 14", "HK 15",
+        "HK 16", "HK 17", "HK 18", "HK 19", "HK 20"
       ]
     },
     {
       "type": "urltest",
-      "tag": "台湾节点",
+      "tag": "Taiwan-Group",
       "outbounds": [
-        "台湾 01", "台湾 02", "台湾 03", "台湾 04", "台湾 05",
-        "台湾 06", "台湾 07", "台湾 08", "台湾 09", "台湾 10"
+        "TW 01", "TW 02", "TW 03", "TW 04", "TW 05",
+        "TW 06", "TW 07", "TW 08", "TW 09", "TW 10"
       ]
     },
     { "type": "direct", "tag": "direct" },
 
-    // --- 香港节点 (01-20) ---
-    {"type": "trojan", "tag": "香港 01", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56301, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 02", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56302, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 03", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56303, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 04", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56304, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 05", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56305, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 06", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56306, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 07", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56307, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 08", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56308, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 09", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56309, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 10", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56310, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 11", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56311, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 12", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56312, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 13", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56313, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 14", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56314, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 15", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56315, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 16", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56316, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 17", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56317, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 18", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56318, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 19", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56319, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "香港 20", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56320, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    // --- Hong Kong Nodes (01-20) ---
+    {"type": "trojan", "tag": "HK 01", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56301, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 02", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56302, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 03", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56303, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 04", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56304, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 05", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56305, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 06", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56306, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 07", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56307, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 08", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56308, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 09", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56309, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 10", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56310, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 11", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56311, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 12", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56312, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 13", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56313, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 14", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56314, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 15", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56315, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 16", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56316, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 17", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56317, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 18", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56318, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 19", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56319, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "HK 20", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56320, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
 
-    // --- 台湾节点 (01-10) ---
-    {"type": "trojan", "tag": "台湾 01", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56321, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 02", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56322, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 03", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56323, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 04", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56324, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 05", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56325, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 06", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56326, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 07", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56327, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 08", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56328, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 09", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56329, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
-    {"type": "trojan", "tag": "台湾 10", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56330, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}}
+    // --- Taiwan Nodes (01-10) ---
+    {"type": "trojan", "tag": "TW 01", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56321, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 02", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56322, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 03", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56323, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 04", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56324, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 05", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56325, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 06", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56326, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 07", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56327, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 08", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56328, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 09", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56329, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}},
+    {"type": "trojan", "tag": "TW 10", "server": "ip0axv1bbsu02kp.1ytnode.com", "server_port": 56330, "password": "d8ca5b3b-e67e-4fdf-8074-f9774b6b4838", "tls": {"enabled": true, "insecure": true}}
   ],
   "route": {
     "rules": [
       { "ip_is_private": true, "outbound": "direct" }
     ],
-    "final": "手动选择",
+    "final": "Manual-Select",
     "auto_detect_interface": true
   }
 }
